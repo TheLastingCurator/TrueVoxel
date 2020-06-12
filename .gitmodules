@@ -1,0 +1,3 @@
+[submodule "ArcticFork"]
+	path = ArcticFork
+	url = https://github.com/TheLastingCurator/ArcticFork.git
