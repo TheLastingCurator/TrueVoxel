@@ -200,6 +200,7 @@
     <ClInclude Include="..\arctic\engine\easy_sprite.h" />
     <ClInclude Include="..\arctic\engine\easy_sprite_instance.h" />
     <ClInclude Include="..\arctic\engine\engine.h" />
+    <ClInclude Include="..\arctic\engine\bitstream.h" />
     <ClInclude Include="..\arctic\engine\csv.h" />
     <ClInclude Include="..\arctic\engine\arctic_platform_fatal.h" />
     <ClInclude Include="..\arctic\engine\decorated_frame.h" />
@@ -247,6 +248,7 @@
     <ClCompile Include="..\arctic\engine\easy_sprite.cpp" />
     <ClCompile Include="..\arctic\engine\easy_sprite_instance.cpp" />
     <ClCompile Include="..\arctic\engine\engine.cpp" />
+    <ClCompile Include="..\arctic\engine\bitstream.cpp" />
     <ClCompile Include="..\arctic\engine\miniz.c" />
     <ClCompile Include="..\arctic\engine\csv.cpp" />
     <ClCompile Include="..\arctic\engine\arctic_platform_pi_byteorder.cpp" />

@@ -1,3 +1,3 @@
-[submodule "ArcticFork"]
-	path = arctic
-	url = https://github.com/TheLastingCurator/ArcticFork.git
+[submodule "arctic"]
+  path = arctic
+	url = https://gitlab.com/TheLastingCurator/arctic.git

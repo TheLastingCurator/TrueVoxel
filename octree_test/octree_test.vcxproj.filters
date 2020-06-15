@@ -29,6 +29,9 @@
     <ClCompile Include="..\arctic\engine\engine.cpp">
       <Filter>engine</Filter>
     </ClCompile>
+    <ClCompile Include="..\arctic\engine\bitstream.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
     <ClCompile Include="..\arctic\engine\miniz.c">
       <Filter>engine</Filter>
     </ClCompile>
@@ -118,6 +121,9 @@
       <Filter>engine</Filter>
     </ClInclude>
     <ClInclude Include="..\arctic\engine\engine.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\arctic\engine\bitstream.h">
       <Filter>engine</Filter>
     </ClInclude>
     <ClInclude Include="..\arctic\engine\csv.h">

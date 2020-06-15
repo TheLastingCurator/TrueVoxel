@@ -40,6 +40,7 @@
 		47DB64675090EE2CBB0B23CC /* ofbx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A98092A97F3D250AFFBD83 /* ofbx.cpp */; };
 		B622C92DF45C4E4876EDFB51 /* arctic_platform_pi_sound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B95801FBFA9F7E93226BC72 /* arctic_platform_pi_sound.cpp */; };
 		8096CFE4A6F609D32BC359E4 /* unicode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D07F371C68B4815F5EE0A /* unicode.cpp */; };
+		CFAD76F9E7C9D888C6510BE7 /* bitstream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC78A6BDA1D71617C6A5F059 /* bitstream.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +124,8 @@
 		8D7D07F371C68B4815F5EE0A /* unicode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unicode.cpp; path = ../arctic/engine/unicode.cpp; sourceTree = SOURCE_ROOT; };
 		EAB69F1C2F70B7C03DFDDCB2 /* arctic_platform_byteorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = arctic_platform_byteorder.h; path = ../arctic/engine/arctic_platform_byteorder.h; sourceTree = SOURCE_ROOT; };
 		D16028ACD1454F0DB0377704 /* arctic_platform_sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = arctic_platform_sound.h; path = ../arctic/engine/arctic_platform_sound.h; sourceTree = SOURCE_ROOT; };
+		CC78A6BDA1D71617C6A5F059 /* bitstream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bitstream.cpp; path = ../arctic/engine/bitstream.cpp; sourceTree = SOURCE_ROOT; };
+		12DE8EF09B30E8ABE09C51DC /* bitstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bitstream.h; path = ../arctic/engine/bitstream.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +219,8 @@
 				34A37FB61F68AD73005ACF7B /* easy.cpp */,
 				34A37FC91F68AD73005ACF7B /* easy.h */,
 				34A37FBE1F68AD73005ACF7B /* engine.cpp */,
+				CC78A6BDA1D71617C6A5F059 /* bitstream.cpp */,
+				12DE8EF09B30E8ABE09C51DC /* bitstream.h */,
 				CE4337D27155374626FBAE37 /* csv.h */,
 				22737C536FC71FB1C5D9F031 /* miniz.c */,
 				3B94E48DEC07BBB48A6ABB86 /* arctic_platform_fatal.h */,
@@ -343,6 +348,7 @@
 				34A37FDC1F68AD73005ACF7B /* arctic_platform_windows.cpp in Sources */,
 				34A37FDE1F68AD73005ACF7B /* arctic_platform_macosx.mm in Sources */,
 				34A37FE11F68AD73005ACF7B /* engine.cpp in Sources */,
+				CFAD76F9E7C9D888C6510BE7 /* bitstream.cpp in Sources */,
 				7676CD1E7FD9E32F674D12EB /* miniz.c in Sources */,
 				57D16744624630A7E107B43D /* csv.cpp in Sources */,
 				6F8007B3B8337168F0565F08 /* arctic_platform_pi_byteorder.cpp in Sources */,

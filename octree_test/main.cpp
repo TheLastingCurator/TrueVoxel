@@ -1,6 +1,7 @@
 // Copyright (c) <year> Your name
 
 #include "engine/easy.h"
+#include "engine/bitstream.h"
 
 #include <nmmintrin.h>
 
@@ -8,75 +9,6 @@ using namespace arctic;  // NOLINT
 using namespace arctic::easy;  // NOLINT
 
 Si32 g_ser = 0;
-
-void LogAndDelete(std::ostringstream *str) {
-  Check(str, "Unexpected nullptr in LogAndDelete call");
-  Log(str->str().c_str());
-  delete str;
-}
-
-std::unique_ptr<std::ostringstream, void(*)(std::ostringstream *str)> Log() {
-  return std::unique_ptr<std::ostringstream, void(*)(std::ostringstream *str)>(new std::ostringstream, LogAndDelete);
-}
-
-class BitStream {
-  // Single bit is represented with 1 byte of 10000000 or 0x80
-  // sequence of 10001001 becomes 1 byte of 0x89
-  // adding bits does not change preexisting ones
- protected:
-  std::deque<Ui8> data_;
-  Ui8 *write_cursor_;
-  Ui8 unused_bits_ = 0;
-  Ui8 *read_cursor_;
-  Ui8 zero_ = 0;
-  Ui64 read_byte_idx_ = 0;
-  Ui64 read_bit_shift_ = 0;
- public:
-  BitStream() : read_cursor_(&zero_) {}
-  BitStream(std::vector<Ui8> &data) {
-    data_.resize(data.size());
-    std::copy(data.begin(), data.end(), data_.begin());
-    BeginRead();
-  }
-  void PushBit(Ui64 bit) {
-    if (unused_bits_) {
-      --unused_bits_;
-      *write_cursor_ |= ((bit & 1) << unused_bits_);
-    } else {
-      data_.push_back((bit & 1) << 7);
-      write_cursor_ = &data_.back();
-      unused_bits_ = 7;
-    }
-  }
-  void BeginRead() {
-    read_byte_idx_ = 0;
-    read_bit_shift_ = 7;
-    if (data_.size()) {
-      read_cursor_ = &data_.front();
-    } else {
-      read_cursor_ = &zero_;
-    }
-  }
-  Ui8 ReadBit() {
-    Ui8 bit = (((*read_cursor_) >> read_bit_shift_) & 1);
-    if (read_bit_shift_ > 0) {
-      --read_bit_shift_;
-    } else {
-      read_bit_shift_ = 7;
-      read_byte_idx_++;
-      if (read_byte_idx_ < data_.size()) {
-        read_cursor_ = &data_[read_byte_idx_];
-      } else {
-        read_cursor_ = &zero_;
-      }
-    }
-    return bit;
-  }
-  const std::deque<Ui8>& GetData() {
-    return data_;
-  }
-};
-
 
 double g_prev_time;
 double g_cur_time;
